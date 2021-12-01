@@ -48,18 +48,3 @@ login({ email, password }, option, (err, api) => {
 	console.log("Đã ghi xong appstate!");
 	process.exit(0);
 });
-						rl.close();
-					});
-				}
-				break;
-			default:
-			console.error(err);
-			process.exit(1);
-		}
-		return;
-	}
-	const json = JSON.stringify(api.getAppState());
-	fs.writeFileSync(`./${config.APPSTATEPATH}`, json);
-	console.log("Đã ghi xong appstate!");
-	process.exit(0);
-});
