@@ -71,7 +71,7 @@ const name = infu[qtv2[i].id].name;
 	var callback = () =>
 	api.sendMessage(
 		{
-		body:`⭐️Tên box: ${threadName}\nID Box: ${id}\n${pdd} Phê duyệt: ${pd}\nEmoji: ${icon}\n🍄Thông tin:\nTổng ${threadMem} thành viên\n👨‍🦰Nam: ${nam} thành viên \n👩‍🦰Nữ: ${nu} thành viên\n\n🕵️‍♂️Với ${qtv} quản trị viên gồm:\n${listad}\nTổng số tin nhắn: ${sl} tin.`,
+		body:`⭐️Tên box: ${threadName}\n🍄ID Box: ${id}\n${pdd} Phê duyệt: ${pd}\nEmoji: ${icon}\n-Thông tin:\n🍇Tổng ${threadMem} thành viên\n👨‍🦰Nam: ${nam} thành viên \n👩‍🦰Nữ: ${nu} thành viên\n\n🕵️‍♂️Với ${qtv} quản trị viên gồm:\n${listad}\n🥬Tổng số tin nhắn: ${sl} tin.`,
 						attachment: fs.createReadStream(__dirname + '/cache/1.png')
 					},
 					event.threadID,
@@ -82,3 +82,4 @@ const name = infu[qtv2[i].id].name;
 				.pipe(fs.createWriteStream(__dirname + '/cache/1.png'))
 				.on('close', () => callback());
 }
+
